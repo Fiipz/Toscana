@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Toscana - Autêntica Pizza Italiana em Marinhais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .pizza-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-red-600 dark:text-red-400">Pizzeria Toscana</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio"
+                        class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">Início</a>
+                    <a href="#cardapio"
+                        class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">Cardápio</a>
+                    <a href="#contato"
+                        class="text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">Contato</a>
+                    <button id="theme-toggle" class="p-2 rounded-full focus:outline-none">
+                        <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 dark:text-gray-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 pb-4 px-4">
+            <a href="#inicio"
+                class="block py-2 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">Início</a>
+            <a href="#cardapio"
+                class="block py-2 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">Cardápio</a>
+            <a href="#contato"
+                class="block py-2 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-400 transition">Contato</a>
+            <button id="theme-toggle-mobile" class="py-2 text-gray-700 dark:text-gray-300">
+                <i class="fas fa-moon mr-2"></i> Alternar Tema
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero h-96 flex items-center justify-center text-center text-white">
+        <div class="px-4">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Pizzeria Toscana</h1>
+            <p class="text-xl md:text-2xl mb-8">Autêntica pizza italiana em Marinhais</p>
+            <a href="#cardapio"
+                class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-medium transition">Ver
+                Cardápio</a>
+        </div>
+    </section>
+
+    <!-- Cardápio Section -->
+    <section id="cardapio" class="py-16 bg-white dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Nosso Cardápio</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pizza Margherita -->
+                <div
+                    class="pizza-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                        alt="Pizza Margherita" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Margherita</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Molho de tomate, mussarela fresca, manjericão e
+                            azeite de oliva extra virgem.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 dark:text-red-400">€12,50</span>
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Pedir
+                                Agora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Pepperoni -->
+                <div
+                    class="pizza-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1620374645498-af6bd681a0bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Pizza Pepperoni" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Pepperoni</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Molho de tomate, mussarela, pepperoni e
+                            orégano.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 dark:text-red-400">€14,00</span>
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Pedir
+                                Agora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Quatro Queijos -->
+                <div
+                    class="pizza-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                        alt="Pizza Quatro Queijos" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Quatro Queijos</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Molho de tomate, mussarela, gorgonzola,
+                            parmesão e provolone.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 dark:text-red-400">€15,50</span>
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Pedir
+                                Agora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Calabresa -->
+                <div
+                    class="pizza-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1601924582970-9238bcb495d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80"
+                        alt="Pizza Calabresa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Calabresa</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Molho de tomate, mussarela, calabresa fatiada e
+                            cebola.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 dark:text-red-400">€13,50</span>
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Pedir
+                                Agora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Vegetariana -->
+                <div
+                    class="pizza-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80"
+                        alt="Pizza Vegetariana" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Vegetariana</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Molho de tomate, mussarela, berinjela,
+                            abobrinha, pimentão e cebola roxa.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 dark:text-red-400">€14,50</span>
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Pedir
+                                Agora</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Frango com Catupiry -->
+                <div
+                    class="pizza-card bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                        alt="Pizza Frango com Catupiry" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">Frango com Catupiry</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">Molho de tomate, mussarela, frango desfiado e
+                            catupiry.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-lg font-bold text-red-600 dark:text-red-400">€15,00</span>
+                            <button
+                                class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm transition">Pedir
+                                Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-16 bg-gray-100 dark:bg-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Entre em Contato</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Informações de Contato</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-red-600 dark:text-red-400 mt-1 mr-3"></i>
+                            <p class="text-gray-600 dark:text-gray-300">Pizzeria Toscana, Estrada Nacional 367,
+                                Marinhais</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-red-600 dark:text-red-400 mr-3"></i>
+                            <p class="text-gray-600 dark:text-gray-300">+351 123 456 789</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-red-600 dark:text-red-400 mr-3"></i>
+                            <p class="text-gray-600 dark:text-gray-300">contato@pizzeria-toscana.pt</p>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-red-600 dark:text-red-400 mr-3"></i>
+                            <p class="text-gray-600 dark:text-gray-300">Segunda a Domingo: 11:00 - 23:00</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4">Siga-nos</h3>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="text-gray-600 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-400 transition">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="text-gray-600 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-400 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#"
+                                class="text-gray-600 hover:text-red-600 dark:text-gray-300 dark:hover:text-red-400 transition">
+                                <i class="fab fa-tripadvisor text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

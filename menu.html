@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Pizzaria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 2rem;
+            background-color: #fff;
+            color: #333;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: #3f9b3f;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .price {
+            float: right;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .star::after {
+            content: '⭐';
+        }
+
+        .soy::after {
+            content: '🌱';
+        }
+
+        .vegan::after {
+            content: '✅';
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    <div class="section">
+        <h1>🍕 Pizzas</h1>
+        <p>As nossas pizzas têm de base: queijo, orégãos e molho de tomate.</p>
+        <ul>
+            <li>Tropicale (Fiambre, cogumelos, ananás, camarão) <span class="price">8,90€</span></li>
+            <li>Sorrento (Atum, ananás, camarão) <span class="price">8,90€</span></li>
+            <li>Panna (Natas, fiambre, cogumelos, frango, ananás) <span class="price">⭐8,60€</span></li>
+            <li>Amore Mio (Bacon, ananás, camarão) <span class="price">8,90€</span></li>
+            <li>Tropea (Bacon, ananás, cogumelos) <span class="price">8,20€</span></li>
+            <li>Margherita (Queijo) <span class="price">6,60€</span></li>
+            <li>Speedy Gonzales (Chouriço, bacon, ovo mexido, cebola) <span class="price">8,90€</span></li>
+            <li>Prosciutto (Fiambre) <span class="price">7,30€</span></li>
+            <li>Popeye (Espinafres, cogumelos, bacon, ovo mexido, ananás) <span class="price">8,70€</span></li>
+            <li>Prosciutto e Funghi (Fiambre, cogumelos) <span class="price">7,60€</span></li>
+            <li>Carbonara (Molho carbonara, cogumelos, bacon, frango) <span class="price">⭐8,60€</span></li>
+            <li>4 Stagioni (1/4 fiambre, 1/4 cogumelos, 1/4 atum, 1/4 chouriço) <span class="price">8,60€</span></li>
+            <li>Hawaii (Fiambre, ananás) <span class="price">8,20€</span></li>
+            <li>Bolognesa (Molho à bolonhesa, cogumelos) <span class="price">8,60€</span></li>
+            <li>Torino (Bacon, frango, cogumelos, ananás) <span class="price">8,40€</span></li>
+            <li>Pepperoni (Fiambre, pepperoni, cogumelos, azeitonas) <span class="price">8,40€</span></li>
+            <li>Acireale (Atum, cebola, camarão, molho d'alho) <span class="price">8,90€</span></li>
+            <li>Vegetariana (Espinafre, cebola, cogumelos, pimentos) <span class="price">8,30€</span></li>
+            <li>Valentino (Fiambre, cogumelos, atum, pimentos, azeitona preta) <span class="price">8,90€</span></li>
+            <li>3 Formaggi (3 Queijos – mozarela, gorgonzola, gouda) <span class="price">⭐7,90€</span></li>
+            <li>California (Fiambre, ananás, frango) <span class="price">8,20€</span></li>
+            <li>Venezia (Fiambre, cogumelos, 3 queijos) <span class="price">8,40€</span></li>
+            <li>Mon Cherry (Fiambre, cogumelos, camarão, 3 queijos) <span class="price">⭐9,30€</span></li>
+            <li>Veggy (Cogumelos, brócolos, milho, tomate fresco, queijo vegetal) <span class="price">✅9,40€</span></li>
+        </ul>
+        <p class="note">Nota: pizzas metade uns ingredientes, metade outros, acresce 1€</p>
+    </div>
+
+    <div class="section">
+        <h2>🍝 Massas</h2>
+        <ul>
+            <li>Bolognese (Molho à bolonhesa) <span class="price">⭐7,60€</span></li>
+            <li>Diavolo (Molho à bolonhesa, fiambre, cogumelos, picante) <span class="price">⭐8,40€</span></li>
+            <li>Dello Schef (Molho à bolonhesa, fiambre, cogumelos, camarão) <span class="price">⭐9,40€</span></li>
+            <li>Carbonara (Natas, bacon, ovo mexido) <span class="price">⭐8,60€</span></li>
+            <li>San Marino (Natas, bacon, camarão, cogumelos) <span class="price">⭐9,40€</span></li>
+            <li>Matriciana (Molho de tomate, cebola, bacon, cogumelos) <span class="price">8,60€</span></li>
+            <li>Marco Polo (Natas, frango, cogumelos, cebola) <span class="price">⭐8,60€</span></li>
+            <li>Ai 3 Formaggi (Natas, 3 queijos) <span class="price">⭐8,70€</span></li>
+            <li>Zen (Molho de tomate, cogumelos, espinafres, cebola) <span class="price">✅🌱8,40€</span></li>
+            <li>Vegetale (Molho de tomate, cogumelos, brócolos, milho) <span class="price">✅🌱8,60€</span></li>
+        </ul>
+        <p class="note">Massa sem glúten +1,20€</p>
+    </div>
+
+    <div class="section">
+        <h2>🔥 Massas ao forno</h2>
+        <ul>
+            <li>Lasagna (Molho à bolonhesa, fiambre, ovo cozido, queijo) <span class="price">⭐8,80€</span></li>
+            <li>Spaghetti Al Forno (Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo) <span
+                    class="price">⭐8,80€</span></li>
+            <li>Maccheroni Galileo (Molho à bolonhesa, bacon, cogumelos, camarão, queijo) <span
+                    class="price">⭐9,40€</span></li>
+            <li>Maccheroni Alla Transmontana (Molho à bolonhesa, carne picada, chouriço, ovo cozido, cogumelos, queijo)
+                <span class="price">⭐8,80€</span></li>
+            <li>Fusilli Al Forno (Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo) <span
+                    class="price">⭐8,80€</span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🥟 Calzones</h2>
+        <ul>
+            <li>Generale (Atum, fiambre, cogumelos, cebola) <span class="price">8,90€</span></li>
+            <li>Berlusconi (Atum, ovo mexido, ananás, camarão) <span class="price">9,80€</span></li>
+            <li>Alpacino (Espinafres, fiambre, bacon, ovo cozido, 3 queijos) <span class="price">9,20€</span></li>
+            <li>Rossi (Bacon, frango, cogumelos, ananás) <span class="price">8,90€</span></li>
+            <li>Maya (Atum, fiambre, cogumelos, ananás) <span class="price">8,90€</span></li>
+            <li>Don Giovani (Molho à bolonhesa, fiambre, cogumelos, cebola, ovo cozido) <span class="price">9,00€</span>
+            </li>
+            <li>Las Vegas (Natas, atum, fiambre, camarão, ananás) <span class="price">⭐9,80€</span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🥩 Pratos de carne</h2>
+        <ul>
+            <li>Bitoque <span class="price">9,50€</span></li>
+            <li>Bife Pimenta <span class="price">15,90€</span></li>
+            <li>Bife da vazia grelhado <span class="price">15,90€</span></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>Legenda</h3>
+        <ul>
+            <li><span class="star"></span> Contém natas</li>
+            <li><span class="soy"></span> Contém soja</li>
+            <li><span class="vegan"></span> Pratos isentos de ingredientes de origem animal</li>
+        </ul>
+    </div>
+</div>
+</body>
+
+</html>
