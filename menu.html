@@ -7,40 +7,28 @@
     <title>Menu Pizzaria</title>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Roboto&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Satisfy&display=swap');
+
+        body,
+        html {
+            scroll-behavior: smooth;
+            background-color: grey;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
             margin: 2rem;
-            background-color: #fff;
-            color: #333;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Fredoka', sans-serif;
-            color: #3f9b3f;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 0.5rem;
         }
 
         .section {
             margin-bottom: 3rem;
         }
 
-        .price {
-            float: right;
-        }
-
         .note {
             font-size: 0.9rem;
             font-style: italic;
+            color: black;
         }
 
         .star::after {
@@ -54,107 +42,751 @@
         .vegan::after {
             content: '✅';
         }
+
+        .cardapio {
+            width: 60vw;
+            margin: auto;
+        }
+
+        .menu-tittle {
+            font-family: 'Satisfy', cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        .menu-subtittle {
+            font-family: "DM Sans", sans-serif;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        .menu-list {
+            display: grid;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            margin: .3rem 0;
+        }
+
+        .item-name {
+            font-family: "DM Sans", sans-serif;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 0 1rem 0 0;
+        }
+
+        .space {
+            flex: 1;
+            border-bottom: dotted 1px #000000;
+            height: 0px;
+            margin: auto;
+        }
+
+        .ingredients {
+            font-family: "DM Sans", sans-serif;
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #ffffff;
+            flex: 1;
+        }
+
+        .prices {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+            padding: 0 0 0 1rem;
+            border-radius: 5px;
+
+        }
+
+        .price {
+            font-family: "DM Sans", sans-serif;
+            font-weight: bold;
+            font-size: .9rem;
+            font-style: italic;
+            min-width: fit-content;
+            width: 70px;
+
+        }
+
+        .size {
+            font-family: "DM Sans", sans-serif;
+            font-weight: bold;
+            font-size: .9rem;
+            min-width: fit-content;
+            width: 70px;
+        }
+
+        .green {
+            background-color: #008C45;
+        }
+
+        .white {
+            background-color: #f4f5f0;
+        }
+
+        .red {
+            background-color: #d50a3d;
+        }
+
+        .ital {
+            background: linear-gradient(to right, #008C45, #008C45 33.33%, #f4f5f0 33.33%, #f4f5f0 66.66%, #d50a3d 66.66%, #d50a3d);
+
+        }
+
+        .diameter {
+            background-image: url('media/diameter.png');
+            background-size: cover;
+            background-position: center;
+            width: 24px;
+            height: 24px;
+            margin: 0 5px 0 0;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
-<div>
-    <div class="section">
-        <h1>🍕 Pizzas</h1>
-        <p>As nossas pizzas têm de base: queijo, orégãos e molho de tomate.</p>
-        <ul>
-            <li>Tropicale (Fiambre, cogumelos, ananás, camarão) <span class="price">8,90€</span></li>
-            <li>Sorrento (Atum, ananás, camarão) <span class="price">8,90€</span></li>
-            <li>Panna (Natas, fiambre, cogumelos, frango, ananás) <span class="price">⭐8,60€</span></li>
-            <li>Amore Mio (Bacon, ananás, camarão) <span class="price">8,90€</span></li>
-            <li>Tropea (Bacon, ananás, cogumelos) <span class="price">8,20€</span></li>
-            <li>Margherita (Queijo) <span class="price">6,60€</span></li>
-            <li>Speedy Gonzales (Chouriço, bacon, ovo mexido, cebola) <span class="price">8,90€</span></li>
-            <li>Prosciutto (Fiambre) <span class="price">7,30€</span></li>
-            <li>Popeye (Espinafres, cogumelos, bacon, ovo mexido, ananás) <span class="price">8,70€</span></li>
-            <li>Prosciutto e Funghi (Fiambre, cogumelos) <span class="price">7,60€</span></li>
-            <li>Carbonara (Molho carbonara, cogumelos, bacon, frango) <span class="price">⭐8,60€</span></li>
-            <li>4 Stagioni (1/4 fiambre, 1/4 cogumelos, 1/4 atum, 1/4 chouriço) <span class="price">8,60€</span></li>
-            <li>Hawaii (Fiambre, ananás) <span class="price">8,20€</span></li>
-            <li>Bolognesa (Molho à bolonhesa, cogumelos) <span class="price">8,60€</span></li>
-            <li>Torino (Bacon, frango, cogumelos, ananás) <span class="price">8,40€</span></li>
-            <li>Pepperoni (Fiambre, pepperoni, cogumelos, azeitonas) <span class="price">8,40€</span></li>
-            <li>Acireale (Atum, cebola, camarão, molho d'alho) <span class="price">8,90€</span></li>
-            <li>Vegetariana (Espinafre, cebola, cogumelos, pimentos) <span class="price">8,30€</span></li>
-            <li>Valentino (Fiambre, cogumelos, atum, pimentos, azeitona preta) <span class="price">8,90€</span></li>
-            <li>3 Formaggi (3 Queijos – mozarela, gorgonzola, gouda) <span class="price">⭐7,90€</span></li>
-            <li>California (Fiambre, ananás, frango) <span class="price">8,20€</span></li>
-            <li>Venezia (Fiambre, cogumelos, 3 queijos) <span class="price">8,40€</span></li>
-            <li>Mon Cherry (Fiambre, cogumelos, camarão, 3 queijos) <span class="price">⭐9,30€</span></li>
-            <li>Veggy (Cogumelos, brócolos, milho, tomate fresco, queijo vegetal) <span class="price">✅9,40€</span></li>
-        </ul>
-        <p class="note">Nota: pizzas metade uns ingredientes, metade outros, acresce 1€</p>
-    </div>
+    <div class="cardapio">
+        <h1 class="menu-tittle">Pizzas</h1>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="ingredients">As nossas pizzas têm como base: queijo, orégãos e molho de tomate.</div>
+                    <div class="prices">
+                        <div class="column">
+                            <div class="row size">
+                                <span class="diameter"></span>
+                                <span>24</span>
+                            </div>
+                            <span class="size">individual</span>
+                        </div>
 
-    <div class="section">
-        <h2>🍝 Massas</h2>
-        <ul>
-            <li>Bolognese (Molho à bolonhesa) <span class="price">⭐7,60€</span></li>
-            <li>Diavolo (Molho à bolonhesa, fiambre, cogumelos, picante) <span class="price">⭐8,40€</span></li>
-            <li>Dello Schef (Molho à bolonhesa, fiambre, cogumelos, camarão) <span class="price">⭐9,40€</span></li>
-            <li>Carbonara (Natas, bacon, ovo mexido) <span class="price">⭐8,60€</span></li>
-            <li>San Marino (Natas, bacon, camarão, cogumelos) <span class="price">⭐9,40€</span></li>
-            <li>Matriciana (Molho de tomate, cebola, bacon, cogumelos) <span class="price">8,60€</span></li>
-            <li>Marco Polo (Natas, frango, cogumelos, cebola) <span class="price">⭐8,60€</span></li>
-            <li>Ai 3 Formaggi (Natas, 3 queijos) <span class="price">⭐8,70€</span></li>
-            <li>Zen (Molho de tomate, cogumelos, espinafres, cebola) <span class="price">✅🌱8,40€</span></li>
-            <li>Vegetale (Molho de tomate, cogumelos, brócolos, milho) <span class="price">✅🌱8,60€</span></li>
+                        <div class="column">
+                            <div class="row size">
+                                <span class="diameter"></span>
+                                <span>32</span>
+                            </div>
+                            <span class="size">Média</span>
+                        </div>
+
+                        <div class="column">
+                            <div class="row">
+                                <span class="diameter"></span>
+                                <span>40</span>
+                            </div>
+                            <span class="size">Familiar</span>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">02 Tropicale</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,90€</span>
+                        <span class="price white">14,10€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, cogumelos, ananás, camarão)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">03 Sorrento</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,90€</span>
+                        <span class="price white">13,90€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Atum, ananás, camarão)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">04 Panna</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,60€</span>
+                        <span class="price white">13,60€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Natas, fiambre, cogumelos, frango, ananás)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">06 Amore Mio</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,90€</span>
+                        <span class="price white">14,10€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Bacon, ananás, camarão)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">08 Tropea</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,20€</span>
+                        <span class="price white">13,00€</span>
+                        <span class="price red">18,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Bacon, ananás, cogumelos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">09 Margherita</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">6,60€</span>
+                        <span class="price white">10,40€</span>
+                        <span class="price red">16,50€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Queijo)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">10 Speedy Gonzales</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,90€</span>
+                        <span class="price white">13,40€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Chourço, bacon, ovo mexido, cebola)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">13 Prosciutto</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">7,30€</span>
+                        <span class="price white">11,10€</span>
+                        <span class="price red">17,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">14 Popeye</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,70€</span>
+                        <span class="price white">13,80€</span>
+                        <span class="price red">19,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Espinafres, cogumelos, bacon, ovo mexido, ananás)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">18 Prosciutto e Funghi</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">7,60€</span>
+                        <span class="price white">12,00€</span>
+                        <span class="price red">18,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, cogumelos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">20 Carbonara</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,60€</span>
+                        <span class="price white">13,40€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho carbonara, cogumelos, bacon, frango)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">21 4 Stagioni</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,20€</span>
+                        <span class="price white">13,30€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(1/4 fiambre, 1/4 cogumelos, 1/4 atum, 1/4 chouriço)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">22 Hawaii</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">7,60€</span>
+                        <span class="price white">12,10€</span>
+                        <span class="price red">18,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, ananás)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">25 Bolognesa</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,00€</span>
+                        <span class="price white">13,00€</span>
+                        <span class="price red">18,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, cogumelos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">29 Torino</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,40€</span>
+                        <span class="price white">13,50€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Bacon, frango, cogumelos, ananás)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">31 Pepperoni</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,40€</span>
+                        <span class="price white">13,50€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, pepperoni, cogumelos, azeitonas)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">33 Acireale</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,90€</span>
+                        <span class="price white">13,90€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Atum, cebola, camarão, molho d'alho)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">35 Vegetariana</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,30€</span>
+                        <span class="price white">13,00€</span>
+                        <span class="price red">18,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Espinafre, cebola, cogumelos, pimentos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">38 Valentino</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,90€</span>
+                        <span class="price white">13,90€</span>
+                        <span class="price red">19,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, cogumelos, atum, pimentos, azeitona preta)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">50 3 Formaggi</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">7,90€</span>
+                        <span class="price white">12,90€</span>
+                        <span class="price red">18,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(3 Queijos – mozzarella, gorgonzola, gouda)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">58 California</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,20€</span>
+                        <span class="price white">13,20€</span>
+                        <span class="price red">18,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, ananás, frango)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">62 Venezia</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">8,40€</span>
+                        <span class="price white">13,50€</span>
+                        <span class="price red">19,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, cogumelos, 3 queijos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">65 Mon Cherry</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">9,30€</span>
+                        <span class="price white">14,40€</span>
+                        <span class="price red">19,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Fiambre, cogumelos, camarão, 3 queijos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">67 Veggy</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price green">9,40€</span>
+                        <span class="price white">15,40€</span>
+                        <span class="price red">21,70€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Cogumelos, brócolos, milho, tomate fresco, queijo vegetal)</div>
+            </li>
+            <li class="menu-item">
+                <div class="ingredients" style="color: black;">Nota: pizzas metade uns ingredientes, metade outros,
+                    acresce 1€</div>
+            </li>
+
+        </ul>
+
+        <h2 class="menu-tittle">Massas</h2>
+        <ul class="menu-list">
+
+            <div class="row">
+                <div class="space"></div>
+                <h2 class="menu-subtittle">Molho Vermelho</h2>
+                <div class="space"></div>
+            </div>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Bolognese</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">7,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Diavolo</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, fiambre, cogumelos, picante)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Dello Schef</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, fiambre, cogumelos, camarão)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Matriciana</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho de tomate, cebola, bacon, cogumelos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Zen</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho de tomate, cogumelos, espinafres, cebola)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Vegetale</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho de tomate, cogumelos, brócolos, milho)</div>
+            </li>
+
+
+            <div class="row">
+                <div class="space"></div>
+                <h2 class="menu-subtittle">Molho Branco</h2>
+                <div class="space"></div>
+            </div>
+
+
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Carbonara</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Natas, bacon, ovo mexido)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">San Marino</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Natas, bacon, camarão, cogumelos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Marco Polo</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,60€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Natas, frango, cogumelos, cebola)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Ai 3 Formaggi</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,70€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Natas, 3 queijos)</div>
+            </li>
         </ul>
         <p class="note">Massa sem glúten +1,20€</p>
-    </div>
 
-    <div class="section">
-        <h2>🔥 Massas ao forno</h2>
-        <ul>
-            <li>Lasagna (Molho à bolonhesa, fiambre, ovo cozido, queijo) <span class="price">⭐8,80€</span></li>
-            <li>Spaghetti Al Forno (Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo) <span
-                    class="price">⭐8,80€</span></li>
-            <li>Maccheroni Galileo (Molho à bolonhesa, bacon, cogumelos, camarão, queijo) <span
-                    class="price">⭐9,40€</span></li>
-            <li>Maccheroni Alla Transmontana (Molho à bolonhesa, carne picada, chouriço, ovo cozido, cogumelos, queijo)
-                <span class="price">⭐8,80€</span></li>
-            <li>Fusilli Al Forno (Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo) <span
-                    class="price">⭐8,80€</span></li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>🥟 Calzones</h2>
-        <ul>
-            <li>Generale (Atum, fiambre, cogumelos, cebola) <span class="price">8,90€</span></li>
-            <li>Berlusconi (Atum, ovo mexido, ananás, camarão) <span class="price">9,80€</span></li>
-            <li>Alpacino (Espinafres, fiambre, bacon, ovo cozido, 3 queijos) <span class="price">9,20€</span></li>
-            <li>Rossi (Bacon, frango, cogumelos, ananás) <span class="price">8,90€</span></li>
-            <li>Maya (Atum, fiambre, cogumelos, ananás) <span class="price">8,90€</span></li>
-            <li>Don Giovani (Molho à bolonhesa, fiambre, cogumelos, cebola, ovo cozido) <span class="price">9,00€</span>
+        <h2 class="menu-tittle">Massas ao forno</h2>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Lasagna</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,80€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, fiambre, ovo cozido, queijo)</div>
             </li>
-            <li>Las Vegas (Natas, atum, fiambre, camarão, ananás) <span class="price">⭐9,80€</span></li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Spaghetti Al Forno</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,80€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Maccheroni Galileo</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,40€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, bacon, cogumelos, camarão, queijo)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Maccheroni Alla Transmontana</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,80€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, carne picada, chouriço, ovo cozido, cogumelos, queijo)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Fusilli Al Forno</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,80€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo)</div>
+            </li>
         </ul>
-    </div>
 
-    <div class="section">
-        <h2>🥩 Pratos de carne</h2>
-        <ul>
-            <li>Bitoque <span class="price">9,50€</span></li>
-            <li>Bife Pimenta <span class="price">15,90€</span></li>
-            <li>Bife da vazia grelhado <span class="price">15,90€</span></li>
+        <h2 class="menu-tittle">Calzones</h2>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Generale</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Atum, fiambre, cogumelos, cebola)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Berlusconi</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,80€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Atum, ovo mexido, ananás, camarão)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Alpacino</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,20€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Espinafres, fiambre, bacon, ovo cozido, 3 queijos)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Rossi</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Bacon, frango, cogumelos, ananás)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Maya</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">8,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Atum, fiambre, cogumelos, ananás)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Don Giovani</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,00€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Molho à bolonhesa, fiambre, cogumelos, cebola, ovo cozido)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Las Vegas</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">9,80€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Natas, atum, fiambre, camarão, ananás)</div>
+            </li>
         </ul>
-    </div>
 
-    <div class="section">
+        <h2 class="menu-tittle">Pratos de carne</h2>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Costeletas de Porco</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">12,50€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Acompanhadas de batatas fritas e salada)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Frango Grelhado</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">10,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Acompanhado de arroz e batatas fritas)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Entrecosto</div>
+                    <div class="space"></div>
+                    <div class="prices">
+                        <span class="price">13,90€</span>
+                    </div>
+                </div>
+                <div class="ingredients">(Acompanhado de batatas fritas e salada)</div>
+            </li></div>
+        </ul>
+
         <h3>Legenda</h3>
         <ul>
-            <li><span class="star"></span> Contém natas</li>
-            <li><span class="soy"></span> Contém soja</li>
-            <li><span class="vegan"></span> Pratos isentos de ingredientes de origem animal</li>
+            <li class="note"><span class="star"></span> Contém natas</li>
+            <li class="note"><span class="soy"></span> Contém soja</li>
+            <li class="note"><span class="vegan"></span> Pratos isentos de ingredientes de origem animal</li>
         </ul>
     </div>
-</div>
 </body>
 
 </html>
