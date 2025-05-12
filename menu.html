@@ -31,16 +31,16 @@
             color: black;
         }
 
-        .star::after {
+        .natas::after {
             content: '⭐';
         }
 
-        .soy::after {
-            content: '🌱';
+        .soja::after {
+            content: '⭐⭐';
         }
 
         .vegan::after {
-            content: '✅';
+            content: '🍃';
         }
 
         .cardapio {
@@ -105,9 +105,7 @@
             text-align: center;
             padding: 0 0 0 1rem;
             border-radius: 5px;
-
         }
-
         .price {
             font-family: "DM Sans", sans-serif;
             font-weight: bold;
@@ -115,7 +113,13 @@
             font-style: italic;
             min-width: fit-content;
             width: 70px;
-
+        }
+        .price2 {
+            font-family: "DM Sans", sans-serif;
+            font-weight: bold;
+            font-size: .9rem;
+            font-style: italic;
+            min-width: fit-content;
         }
 
         .size {
@@ -170,6 +174,38 @@
 
 <body>
     <div class="cardapio">
+        <h1 class="menu-tittle">Entradas</h1>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name"><em>Pão de alho</em></div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">0,90€</span></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name"><em>Pão de alho e queijo</em></div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">1,30€</span></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name"><em>Pão de alho e queijo vegan</em></div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">1,50€</span></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Azeitonas</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">1,30€</span></div>
+                </div>
+            </li>
+        </ul>
+
         <h1 class="menu-tittle">Pizzas</h1>
         <ul class="menu-list">
             <li class="menu-item">
@@ -481,7 +517,7 @@
             </li>
             <li class="menu-item">
                 <div class="row">
-                    <div class="item-name">67 Veggy</div>
+                    <div class="item-name vegan">67 Veggy</div>
                     <div class="space"></div>
                     <div class="prices">
                         <span class="price green">9,40€</span>
@@ -498,20 +534,26 @@
 
         </ul>
 
-        <h2 class="menu-tittle">Massas</h2>
+        <h1 class="menu-tittle">Massas</h1>
         <ul class="menu-list">
 
             <div class="row">
                 <div class="space"></div>
-                <h2 class="menu-subtittle">Molho Vermelho</h2>
+                <h1 class="menu-subtittle">Molho Vermelho</h1>
                 <div class="space"></div>
             </div>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name" style="flex: 1;">Escolha o tipo de massa:</div>
+                </div>
+                <div class="ingredients">(Esparguete, Macarrão, Espirais)</div>
+            </li>
             <li class="menu-item">
                 <div class="row">
                     <div class="item-name">Bolognese</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">7,60€</span>
+                        <span class="price2">7,60€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa)</div>
@@ -521,7 +563,7 @@
                     <div class="item-name">Diavolo</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,40€</span>
+                        <span class="price2">8,40€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, fiambre, cogumelos, picante)</div>
@@ -531,7 +573,7 @@
                     <div class="item-name">Dello Schef</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">9,40€</span>
+                        <span class="price2">9,40€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, fiambre, cogumelos, camarão)</div>
@@ -541,7 +583,7 @@
                     <div class="item-name">Matriciana</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,60€</span>
+                        <span class="price2">8,60€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho de tomate, cebola, bacon, cogumelos)</div>
@@ -551,7 +593,7 @@
                     <div class="item-name">Zen</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,40€</span>
+                        <span class="price2">8,40€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho de tomate, cogumelos, espinafres, cebola)</div>
@@ -561,7 +603,7 @@
                     <div class="item-name">Vegetale</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,60€</span>
+                        <span class="price2">8,60€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho de tomate, cogumelos, brócolos, milho)</div>
@@ -570,7 +612,7 @@
 
             <div class="row">
                 <div class="space"></div>
-                <h2 class="menu-subtittle">Molho Branco</h2>
+                <h1 class="menu-subtittle">Molho Branco</h1>
                 <div class="space"></div>
             </div>
 
@@ -580,7 +622,7 @@
                     <div class="item-name">Carbonara</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,60€</span>
+                        <span class="price2">8,60€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Natas, bacon, ovo mexido)</div>
@@ -590,7 +632,7 @@
                     <div class="item-name">San Marino</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">9,40€</span>
+                        <span class="price2">9,40€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Natas, bacon, camarão, cogumelos)</div>
@@ -600,7 +642,7 @@
                     <div class="item-name">Marco Polo</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,60€</span>
+                        <span class="price2">8,60€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Natas, frango, cogumelos, cebola)</div>
@@ -610,22 +652,21 @@
                     <div class="item-name">Ai 3 Formaggi</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,70€</span>
+                        <span class="price2">8,70€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Natas, 3 queijos)</div>
             </li>
         </ul>
-        <p class="note">Massa sem glúten +1,20€</p>
 
-        <h2 class="menu-tittle">Massas ao forno</h2>
+        <h1 class="menu-tittle">Massas ao forno</h1>
         <ul class="menu-list">
             <li class="menu-item">
                 <div class="row">
                     <div class="item-name">Lasagna</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,80€</span>
+                        <span class="price2">8,80€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, fiambre, ovo cozido, queijo)</div>
@@ -635,7 +676,7 @@
                     <div class="item-name">Spaghetti Al Forno</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,80€</span>
+                        <span class="price2">8,80€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo)</div>
@@ -645,7 +686,7 @@
                     <div class="item-name">Maccheroni Galileo</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">9,40€</span>
+                        <span class="price2">9,40€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, bacon, cogumelos, camarão, queijo)</div>
@@ -655,32 +696,32 @@
                     <div class="item-name">Maccheroni Alla Transmontana</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,80€</span>
+                        <span class="price2">8,80€</span>
                     </div>
                 </div>
-                <div class="ingredients">(Molho à bolonhesa, carne picada, chouriço, ovo cozido, cogumelos, queijo)</div>
+                <div class="ingredients">(Molho à bolonhesa, carne picada, chouriço, ovo cozido, cogumelos, queijo)
+                </div>
             </li>
             <li class="menu-item">
                 <div class="row">
                     <div class="item-name">Fusilli Al Forno</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,80€</span>
+                        <span class="price2">8,80€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, fiambre, ovo cozido, cogumelos, queijo)</div>
             </li>
         </ul>
+        <p class="note">Massa sem glúten +1,20€</p>
 
-        <h2 class="menu-tittle">Calzones</h2>
+        <h1 class="menu-tittle">Calzones</h1>
         <ul class="menu-list">
             <li class="menu-item">
                 <div class="row">
                     <div class="item-name">Generale</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">8,90€</span>
-                    </div>
+                    <div class="prices"><span class="price2">8,90€</span></div>
                 </div>
                 <div class="ingredients">(Atum, fiambre, cogumelos, cebola)</div>
             </li>
@@ -689,7 +730,7 @@
                     <div class="item-name">Berlusconi</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">9,80€</span>
+                        <span class="price2">9,80€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Atum, ovo mexido, ananás, camarão)</div>
@@ -699,7 +740,7 @@
                     <div class="item-name">Alpacino</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">9,20€</span>
+                        <span class="price2">9,20€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Espinafres, fiambre, bacon, ovo cozido, 3 queijos)</div>
@@ -709,7 +750,7 @@
                     <div class="item-name">Rossi</div>
                     <div class="space"></div>
                     <div class="prices">
-                        <span class="price">8,90€</span>
+                        <span class="price2">8,90€</span>
                     </div>
                 </div>
                 <div class="ingredients">(Bacon, frango, cogumelos, ananás)</div>
@@ -718,9 +759,7 @@
                 <div class="row">
                     <div class="item-name">Maya</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">8,90€</span>
-                    </div>
+                    <div class="prices"><span class="price2">8,90€</span></div>
                 </div>
                 <div class="ingredients">(Atum, fiambre, cogumelos, ananás)</div>
             </li>
@@ -728,9 +767,7 @@
                 <div class="row">
                     <div class="item-name">Don Giovani</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">9,00€</span>
-                    </div>
+                    <div class="prices"><span class="price2">9,00€</span></div>
                 </div>
                 <div class="ingredients">(Molho à bolonhesa, fiambre, cogumelos, cebola, ovo cozido)</div>
             </li>
@@ -738,23 +775,19 @@
                 <div class="row">
                     <div class="item-name">Las Vegas</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">9,80€</span>
-                    </div>
+                    <div class="prices"><span class="price2">9,80€</span></div>
                 </div>
                 <div class="ingredients">(Natas, atum, fiambre, camarão, ananás)</div>
             </li>
         </ul>
 
-        <h2 class="menu-tittle">Pratos de carne</h2>
+        <h1 class="menu-tittle">Pratos de carne</h1>
         <ul class="menu-list">
             <li class="menu-item">
                 <div class="row">
                     <div class="item-name">Costeletas de Porco</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">12,50€</span>
-                    </div>
+                    <div class="prices"><span class="price2">12,50€</span></div>
                 </div>
                 <div class="ingredients">(Acompanhadas de batatas fritas e salada)</div>
             </li>
@@ -762,9 +795,7 @@
                 <div class="row">
                     <div class="item-name">Frango Grelhado</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">10,90€</span>
-                    </div>
+                    <div class="prices"><span class="price2">10,90€</span></div>
                 </div>
                 <div class="ingredients">(Acompanhado de arroz e batatas fritas)</div>
             </li>
@@ -772,19 +803,101 @@
                 <div class="row">
                     <div class="item-name">Entrecosto</div>
                     <div class="space"></div>
-                    <div class="prices">
-                        <span class="price">13,90€</span>
-                    </div>
+                    <div class="prices"><span class="price2">13,90€</span></div>
                 </div>
                 <div class="ingredients">(Acompanhado de batatas fritas e salada)</div>
-            </li></div>
+            </li>
+
         </ul>
 
-        <h3>Legenda</h3>
-        <ul>
-            <li class="note"><span class="star"></span> Contém natas</li>
-            <li class="note"><span class="soy"></span> Contém soja</li>
-            <li class="note"><span class="vegan"></span> Pratos isentos de ingredientes de origem animal</li>
+        <h1 class="menu-tittle">Saladas</h1>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name vegan">130 Verde Con Cipola</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">3,50€</span></div>
+                </div>
+                <div class="ingredients">(Alface, cebola)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name vegan">132 Mista</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">4,50€</span></div>
+                </div>
+                <div class="ingredients">(Alface, tomate, pepino, cebola)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">136 Capricciosa</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">7,90€</span></div>
+                </div>
+                <div class="ingredients">(Alface, tomate, pepino, atum, ovo cozido, queijo, azeitonas)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">137 Toscana</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">8,90€</span></div>
+                </div>
+                <div class="ingredients">(Alface, tomate, pepino, atum, cebola, ovo cozido, milho, ananás, queijo,
+                    azeitonas)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">138 Pomodoro e Mozzarella</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">6,10€</span></div>
+                </div>
+                <div class="ingredients">(Tomate, mozzarella fresca)</div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">142 Donatello</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">7,70€</span></div>
+                </div>
+                <div class="ingredients">(Alface, ananás, frango, milho, cenoura ralada)</div>
+            </li>
+        </ul>
+
+        <h1 class="menu-tittle">Sobremesas</h1>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Tiramisù</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">3,50€</span></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Mousse de Chocolate</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">2,90€</span></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Panna Cotta de Frutos Vermelhos</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">2,90€</span></div>
+                </div>
+            </li>
+            <li class="menu-item">
+                <div class="row">
+                    <div class="item-name">Doce de Amêndoa</div>
+                    <div class="space"></div>
+                    <div class="prices"><span class="price2">3,50€</span></div>
+                </div>
+            </li>
+            <ul class="menu-list">
+                <li class="note"><span class="natas"></span> Contém natas</li>
+                <li class="note"><span class="soja"></span> Contém soja</li>
+                <li class="note"><span class="vegan"></span> Pratos isentos de ingredientes de origem animal</li>
+            </ul>
         </ul>
     </div>
 </body>

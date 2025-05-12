@@ -3,10 +3,11 @@
 
 header {
     width: 100%;
-    height: 10vh;
-    background-color: rgb(31, 41, 55);
+    height: 8vh;
+    background-color: #ffffff;
     box-shadow: 0 -2px 10px -2px black;
     position: fixed;
+    z-index: 10;
 }
 
 nav {
@@ -46,9 +47,9 @@ nav {
             font-family: "DM Sans", sans-serif;
             text-decoration: none;
             font-size: 1.3rem;
-            font-weight: 200;
+            font-weight: 400;
             transition: all 0.3s ease;
-
+            color:black;
         }
 
         .link-txt:hover {
@@ -85,14 +86,14 @@ nav {
 
     .home-txt1 {
         font-family: "Satisfy", cursive;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: 200;
         margin: auto;
     }
 
     .home-txt2 {
         font-family: "DM Sans", sans-serif;
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 200;
         font-style: italic;
         margin: auto;
@@ -100,11 +101,11 @@ nav {
 
     .italia-btn {
         font-family: "Satisfy", cursive;
-        font-weight: bold;
         font-size: 1rem;
+        color: rgb(0, 0, 0);
         margin: 1rem auto 0 auto;
-        width: 150px;
-        height: 30px;
+        width: 200px;
+        height: 50px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -117,7 +118,7 @@ nav {
         transition: all 0.3s ease;
         transform: translateY(-5px);
     }
-
+    
 }
 
 .menu-tittle {
@@ -125,20 +126,167 @@ nav {
     font-size: 3rem;
     font-weight: 200;
     margin: auto;
-    padding: 1rem;
+    padding: 1rem 0 1rem 0;
+    color: black;
 }
 
 .menu {
     height: 1000px;
 
 }
+.section {
+    margin-bottom: 3rem;
+}
 
+.note {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: black;
+}
+
+.natas::after {
+    content: '⭐';
+}
+
+.soja::after {
+    content: '⭐⭐';
+}
+
+.vegan::after {
+    content: '🍃';
+}
+
+.cardapio {
+    width: 60vw;
+    margin: auto;
+}
+
+.menu-tittle {
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+}
+
+.menu-subtittle {
+    font-family: "DM Sans", sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.menu-list {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    margin: .3rem 0;
+}
+
+.item-name {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0 1rem 0 0;
+}
+
+.space {
+    flex: 1;
+    border-bottom: dotted 1px #000000;
+    height: 0px;
+    margin: auto;
+}
+
+.ingredients {
+    font-family: "DM Sans", sans-serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #000000;
+    flex: 1;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 0 0 1rem;
+    border-radius: 5px;
+}
+.price {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+    font-style: italic;
+    min-width: fit-content;
+    width: 70px;
+}
+.price2 {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+    font-style: italic;
+    min-width: fit-content;
+}
+
+.size {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-size: .9rem;
+    min-width: fit-content;
+    width: 70px;
+}
+
+.green {
+    background-color: #008C45;
+}
+
+.white {
+    background-color: #f4f5f0;
+}
+
+.red {
+    background-color: #d50a3d;
+}
+
+.ital {
+    background: linear-gradient(to right, #008C45, #008C45 33.33%, #f4f5f0 33.33%, #f4f5f0 66.66%, #d50a3d 66.66%, #d50a3d);
+
+}
+
+.diameter {
+    background-image: url('media/diameter.png');
+    background-size: cover;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    margin: 0 5px 0 0;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 html,
 body {
     width: 100%;
     height: 100%;
     font-family: "DM Sans", sans-serif;
-    color: white;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -148,26 +296,25 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: rgb(31, 41, 55);
-    color: white;
+    background-color: #ffffff;
     font-size: 1.2rem;
 }
 
 main {
-    padding-top: 10vh;
+    padding-top: 8vh;
     display: flex;
     flex-direction: column;
 }
 
 footer {
-    background-color: rgb(55, 65, 81);
+    background-color: #b30000;
     box-shadow: 0 0px 10px -2px black;
     min-height: 20vh;
     width: 100%;
     position: relative;
-
+    margin: 100px 0 0 0;
     .watermark {
-        color: rgba(255, 255, 255, 0.5);
+        color:#ffffff;
         font-style: italic;
         text-decoration: none;
         font-size: .8rem;
